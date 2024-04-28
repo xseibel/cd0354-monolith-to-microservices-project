@@ -8,10 +8,10 @@ services:
 script:
   - docker --version # print the version for logging
 ## Build
-  - docker build -t lexflex/udagram-api-feed:latest udagram-api-feed -f ./udagram-api-feed/Dockerfile ./udagram-api-feed
-  - docker build -t lexflex/udagram-api-user:latest udagram-api-user -f ./udagram-api-user/Dockerfile ./udagram-api-user
-  - docker build -t lexflex/udagram-api-frontend:latest udagram-api-frontend -f ./udagram-api-frontend/Dockerfile ./udagram-api-frontend
-  - docker build -t lexflex/udagram-api-reverseproxy:latest udagram-api-reverseproxy -f ./udagram-reverseproxy/Dockerfile ./udagram-reverseproxy
+  - docker build -t lexflex/udagram-api-feed:latest -f ./udagram-api-feed/Dockerfile ./udagram-api-feed
+  - docker build -t lexflex/udagram-api-user:latest -f ./udagram-api-user/Dockerfile ./udagram-api-user
+  - docker build -t lexflex/udagram-api-frontend:latest -f ./udagram-api-frontend/Dockerfile ./udagram-api-frontend
+  - docker build -t lexflex/udagram-api-reverseproxy:latest -f ./udagram-reverseproxy/Dockerfile ./udagram-reverseproxy
 
 after_success:
 ## Push
